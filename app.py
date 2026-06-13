@@ -10,9 +10,9 @@ st.write("Enter the structural and momentum details of a mutual fund to predict 
 # 2. Load the exported AI model and features
 @st.cache_resource # This caches the model so it doesn't reload on every button click
 def load_assets():
-    model = joblib.load('data/processed/xgboost_commission_model.pkl')
-    features = joblib.load('data/processed/model_features.pkl')
-    fund_houses = joblib.load('data/processed/fund_houses.pkl')
+    model = joblib.load('data/xgboost_commission_model.pkl')
+    features = joblib.load('data/model_features.pkl')
+    fund_houses = joblib.load('data/fund_houses.pkl')
     return model, features, fund_houses
 
 model, features_to_use, fund_houses_list = load_assets()
